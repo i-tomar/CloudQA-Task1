@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Reordered fields</title>
+  <style>
+    body { font-family: Georgia, serif; margin: 2rem; color: #1c1917; background: #faf7f2; }
+    form { max-width: 40rem; }
+    .field { margin: 0 0 1rem; }
+    label, .field-label { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+    input[type="text"], select, textarea { width: 100%; max-width: 24rem; padding: 0.4rem 0.5rem; }
+    button { margin-top: 0.5rem; }
+    h1 { font-size: 1.4rem; }
+    .note { color: #57534e; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <!-- The same fields in a different order. Position in the form is not a signal. -->
+  <h1>Reordered fields</h1>
+  <p class="note">The same fields in a different order. Position in the form is not a signal.</p>
+
+<form id="automationtestform" class="well" method="post" autocomplete="off" novalidate onsubmit="window.__submitted=true;return false;">
+    <!-- State, then gender, then last name, then the first name at the bottom. -->
+    <div class="field form-group">
+        
+                        <label for="state" name="State">  State  </label>
+                        <select class="form-control" id="state" name="State">
+
+                            <option> -- Select Country -- </option>
+                            <option value="Afganistan"> Afganistan </option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="India">India</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United States">United States</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+
+                        </select>
+
+    </div>
+    <div class="field form-group">
+        
+                        <label class="control-label">Gender</label>
+                        <div class="choices">
+                            <input id="male" type="radio" name="gender" value="Male" />
+                            <span name="male" for="male">Male</span>
+                            <input id="female" type="radio" name="gender" value="Female" />
+                            <span name="female" for="female">Female</span>
+                            <input id="transgender" type="radio" name="gender" value="Transgender" />
+                            <span name="transgender" for="female">Transgender</span>
+                        </div>
+
+    </div>
+    <div class="field form-group">
+        <label for="lname" class="control-label">Last Name</label>
+        <input id="lname" type="text" name="Last Name" class="form-control" placeholder="Surname" />
+    </div>
+    <div class="field form-group">
+        <label for="email" class="control-label">Email</label>
+        <input id="email" type="text" name="Email" class="form-control" placeholder="Email" />
+    </div>
+    <div class="field form-group">
+        <label for="fname" class="control-label">First Name</label>
+        <input id="fname" type="text" name="First Name" class="form-control" placeholder="Name" />
+    </div>
+      <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Similar decoy fields</title>
+  <style>
+    body { font-family: Georgia, serif; margin: 2rem; color: #1c1917; background: #faf7f2; }
+    form { max-width: 40rem; }
+    .field { margin: 0 0 1rem; }
+    label, .field-label { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+    input[type="text"], select, textarea { width: 100%; max-width: 24rem; padding: 0.4rem 0.5rem; }
+    button { margin-top: 0.5rem; }
+    h1 { font-size: 1.4rem; }
+    .note { color: #57534e; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <!-- Emergency First Name, Middle Name, Nickname, Last Name, a marital-status radio group, Home State, and a Country select. The plain First Name, Gender and State fields are still the clear match. -->
+  <h1>Similar decoy fields</h1>
+  <p class="note">Emergency First Name, Middle Name, Nickname, Last Name, a marital-status radio group, Home State, and a Country select. The plain First Name, Gender and State fields are still the clear match.</p>
+
+<form id="automationtestform" class="well" method="post" autocomplete="off" novalidate onsubmit="window.__submitted=true;return false;">
+    <div class="field">
+        <label for="fn">First Name</label>
+        <input id="fn" name="First Name" type="text" class="form-control" placeholder="Name" />
+    </div>
+    <div class="field">
+        <label for="em">Emergency First Name</label>
+        <input id="em" name="Emergency First Name" type="text" class="form-control" placeholder="Name" />
+    </div>
+    <div class="field">
+        <label for="mid">Middle Name</label>
+        <input id="mid" name="Middle Name" type="text" class="form-control" placeholder="Name" />
+    </div>
+    <div class="field">
+        <label for="nick">Nickname</label>
+        <input id="nick" name="Nickname" type="text" class="form-control" placeholder="Name" />
+    </div>
+    <div class="field">
+        <label for="ln">Last Name</label>
+        <input id="ln" name="Last Name" type="text" class="form-control" placeholder="Surname" />
+    </div>
+    <div class="field">
+        
+                        <label class="control-label">Gender</label>
+                        <div class="choices">
+                            <input id="male" type="radio" name="gender" value="Male" />
+                            <span name="male" for="male">Male</span>
+                            <input id="female" type="radio" name="gender" value="Female" />
+                            <span name="female" for="female">Female</span>
+                            <input id="transgender" type="radio" name="gender" value="Transgender" />
+                            <span name="transgender" for="female">Transgender</span>
+                        </div>
+
+    </div>
+    <div class="field">
+        <label class="control-label">Marital Status</label>
+        <div class="choices">
+            <input type="radio" name="marital" value="Single" />
+            <span>Single</span>
+            <input type="radio" name="marital" value="Married" />
+            <span>Married</span>
+        </div>
+    </div>
+    <div class="field">
+        
+                        <label for="state" name="State"> State </label>
+                        <select class="form-control" id="state" name="State">
+
+                            <option> -- Select Country -- </option>
+                            <option value="Afganistan"> Afganistan </option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="India">India</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United States">United States</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+
+                        </select>
+
+    </div>
+    <div class="field">
+        
+                        <label for="home-state" name="Home State"> Home State </label>
+                        <select class="form-control" id="home-state" name="Home State">
+
+                            <option> -- Select Country -- </option>
+                            <option value="Afganistan"> Afganistan </option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="India">India</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United States">United States</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+
+                        </select>
+
+    </div>
+    <div class="field">
+        
+                        <label for="country-select" name="Country"> Country </label>
+                        <select class="form-control" id="country-select" name="Country">
+
+                            <option> -- Select Country -- </option>
+                            <option value="Afganistan"> Afganistan </option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="India">India</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United States">United States</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+
+                        </select>
+
+    </div>
+    <div class="field">
+        <label for="country-text"> Country </label>
+        <input id="country-text" name="Country" type="text" class="form-control" placeholder="Country" />
+    </div>
+      <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

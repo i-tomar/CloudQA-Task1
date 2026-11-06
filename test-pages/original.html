@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Original practice form</title>
+  <style>
+    body { font-family: Georgia, serif; margin: 2rem; color: #1c1917; background: #faf7f2; }
+    form { max-width: 40rem; }
+    .field { margin: 0 0 1rem; }
+    label, .field-label { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+    input[type="text"], select, textarea { width: 100%; max-width: 24rem; padding: 0.4rem 0.5rem; }
+    button { margin-top: 0.5rem; }
+    h1 { font-size: 1.4rem; }
+    .note { color: #57534e; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <!-- Main form copied from the live page, plus a duplicate-id form, a hidden form, and an iframe. -->
+  <h1>Original practice form</h1>
+  <p class="note">Main form copied from the live page, plus a duplicate-id form, a hidden form, and an iframe.</p>
+
+<form id="automationtestform" class="well" method="post" autocomplete="off" novalidate onsubmit="window.__submitted=true;return false;">
+    <h2>Form</h2>
+    <!--field-->
+    <div class="field form-group">
+        <label for="fname" name="fname" class="control-label">First Name</label>
+        <input id="fname" type="text" name="First Name" class="form-control" placeholder="Name" />
+    </div>
+    <!--/field-->
+    <!--field-->
+    <div class="field form-group">
+        <label for="lname" name="lname" class="control-label">Last Name</label>
+        <input id="lname" type="text" name="Last Name" class="form-control" placeholder="Surname" />
+    </div>
+    <!--/field-->
+    <!--field-->
+    <div class="field form-group">
+        
+                        <label class="control-label">Gender</label>
+                        <div class="choices">
+                            <input id="male" type="radio" name="gender" value="Male" />
+                            <span name="male" for="male">Male</span>
+                            <input id="female" type="radio" name="gender" value="Female" />
+                            <span name="female" for="female">Female</span>
+                            <input id="transgender" type="radio" name="gender" value="Transgender" />
+                            <span name="transgender" for="female">Transgender</span>
+                        </div>
+
+    </div>
+    <!--/field-->
+    <!--field-->
+    <div class="field form-group">
+        <label for="dob" class="control-label">Date of Birth</label>
+        <input id="dob" type="text" name="Date of Birth" class="form-control" placeholder="YYYY-MM-DD" />
+    </div>
+    <!--/field-->
+    <!--field-->
+    <div class="field form-group">
+        <label for="mobile" class="control-label">Mobile #</label>
+        <input id="mobile" name="Mobile Number" class="form-control" type="number" placeholder="Mobile Number" />
+    </div>
+    <!--/field-->
+    <!--field-->
+    <div class="field form-group">
+        <label for="email" class="control-label">Email</label>
+        <input id="email" type="text" name="Email" class="form-control" placeholder="Email" />
+    </div>
+    <!--/field-->
+    <!--field-->
+    <div class="field form-group">
+        <label for="country" class="control-label"> Country </label>
+        <input id="country" type="text" name="Country" class="form-control" placeholder="Country" />
+    </div>
+    <!--/field-->
+    <!--field-->
+    <div class="field form-group">
+        
+                        <label for="state" name="State">  State  </label>
+                        <select class="form-control" id="state" name="State">
+
+                            <option> -- Select Country -- </option>
+                            <option value="Afganistan"> Afganistan </option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="Belgium">Belgium</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Cuba">Cuba</option>
+                            <option value="Denmark">Denmark</option>
+                            <option value="Egypt">Egypt</option>
+                            <option value="Finland">Finland</option>
+                            <option value="France">France</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Greece">Greece</option>
+                            <option value="Greenland">Greenland</option>
+                            <option value="Hong Kong">Hong Kong</option>
+                            <option value="India">India</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Kenya">Kenya</option>
+                            <option value="Malaysia">Malaysia</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Nepal">Nepal</option>
+                            <option value="Netherlands">Netherlands</option>
+                            <option value="Philippines">Philippines</option>
+                            <option value="Russia">Russia</option>
+                            <option value="Saudi Arabia">Saudi Arabia</option>
+                            <option value="Singapore">Singapore</option>
+                            <option value="Turkey">Turkey</option>
+                            <option value="United Arab Emirates">United Arab Emirates</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United States">United States</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+
+                        </select>
+
+    </div>
+    <!--/field-->
+    <!--field-->
+    <div class="field form-group">
+        <label class="control-label">Hobbies</label>
+        <input type="checkbox" id="Dance" value="Dance" name="Hobbies" />
+        <span for="Dance">Dance</span>
+        <input type="checkbox" id="Reading" value="Reading" name="Hobbies" />
+        <span for="Reading">Reading</span>
+    </div>
+    <!--/field-->
+    <!--field-->
+    <div class="field form-group">
+        <label class="control-label">About Yourself</label>
+        <textarea class="form-control" name="About" placeholder="About Yourself"></textarea>
+    </div>
+    <!--/field-->
+    <!--field-->
+    <div class="field form-group" hidden style="display:none">
+        <label for="secret-first">First Name</label>
+        <input id="secret-first" type="text" name="Hidden First" placeholder="Name" />
+    </div>
+    <!--/field-->
+    <div class="field">
+        <label for="user">Username</label>
+        <input id="user" type="text" name="Username" class="form-control" placeholder="Username" />
+    </div>
+      <button type="submit">Submit</button>
+</form>
+
+  <h2>Duplicate form, same ids</h2>
+  <p class="note">A second copy with the same ids. The resolver must keep the first form.</p>
+  <form id="duplicate-form" class="well" method="post" autocomplete="off" novalidate onsubmit="window.__submitted=true;return false;">
+    <div class="field">
+        <label for="fname">First Name</label>
+        <input id="fname" type="text" name="First Name" placeholder="Name" />
+    </div>
+    <div class="field">
+        
+                        <label class="control-label">Gender</label>
+                        <div class="choices">
+                            <input id="male" type="radio" name="gender" value="Male" />
+                            <span name="male" for="male">Male</span>
+                            <input id="female" type="radio" name="gender" value="Female" />
+                            <span name="female" for="female">Female</span>
+                            <input id="transgender" type="radio" name="gender" value="Transgender" />
+                            <span name="transgender" for="female">Transgender</span>
+                        </div>
+
+    </div>
+    <div class="field">
+        
+                        <label for="state" name="State">  State  </label>
+                        <select class="form-control" id="state" name="State">
+
+                            <option> -- Select Country -- </option>
+                            <option value="Afganistan"> Afganistan </option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="India">India</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United States">United States</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+
+                        </select>
+
+    </div>
+      <button type="submit">Submit</button>
+</form>
+
+  <h2>Hidden form</h2>
+  <form id="hidden-form" class="well" hidden style="display:none" method="post" autocomplete="off" onsubmit="window.__submitted=true;return false;">
+    <div hidden style="display:none">
+    <div class="field">
+        <label for="fname">First Name</label>
+        <input id="fname" type="text" name="First Name" placeholder="Name" />
+    </div>
+    </div>
+  </form>
+
+  <h2>Iframe, not entered</h2>
+  <iframe id="trap-frame" title="nested form" src="iframe-trap.html" style="width:100%;height:140px;border:1px solid #d6d3d1"></iframe>
+
+</body>
+</html>

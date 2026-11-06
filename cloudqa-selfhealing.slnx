@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/SelfHealing.Core/SelfHealing.Core.csproj" />
+    <Project Path="src/SelfHealing.Runner/SelfHealing.Runner.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/SelfHealing.Tests/SelfHealing.Tests.csproj" />
+  </Folder>
+</Solution>

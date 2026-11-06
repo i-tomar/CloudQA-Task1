@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Iframe trap</title>
+</head>
+<body>
+  <form id="iframe-form" method="post" onsubmit="window.__submitted=true;return false;">
+    <label for="fname">First Name</label>
+    <input id="fname" name="First Name" type="text" placeholder="Name" />
+    <label>Gender</label>
+    <input type="radio" name="gender" value="Female" />
+    <label for="state">State</label>
+    <select id="state" name="State">
+      <option> -- Select Country -- </option>
+      <option value="India">India</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

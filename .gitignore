@@ -1,0 +1,30 @@
+# Build
+bin/
+obj/
+out/
+artifacts/
+TestResults/
+reports/
+
+# IDE and OS
+.vs/
+.idea/
+*.user
+*.suo
+*.DotSettings.user
+.DS_Store
+
+# NuGet
+*.nupkg
+project.lock.json
+
+# Chrome profiles created during a run
+chrome-profile/
+
+# Local environment
+.env
+*.log
+
+# Personal work logs
+history.md
+work.md

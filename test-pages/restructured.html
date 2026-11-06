@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Restructured markup</title>
+  <style>
+    body { font-family: Georgia, serif; margin: 2rem; color: #1c1917; background: #faf7f2; }
+    form { max-width: 40rem; }
+    .field { margin: 0 0 1rem; }
+    label, .field-label { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+    input[type="text"], select, textarea { width: 100%; max-width: 24rem; padding: 0.4rem 0.5rem; }
+    button { margin-top: 0.5rem; }
+    h1 { font-size: 1.4rem; }
+    .note { color: #57534e; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <!-- No ids, no names on the text fields, captions are spans instead of labels, and the State caption comes after the select. A Country select sits beside it. -->
+  <h1>Restructured markup</h1>
+  <p class="note">No ids, no names on the text fields, captions are spans instead of labels, and the State caption comes after the select. A Country select sits beside it.</p>
+
+<form method="post" autocomplete="off" novalidate onsubmit="window.__submitted=true;return false;">
+    <section class="block">
+        <span class="field-label">Last Name</span>
+        <input type="text" placeholder="Surname" />
+    </section>
+    <section class="block">
+        <span class="field-label">First Name</span>
+        <input type="text" placeholder="Name" />
+    </section>
+    <section class="block">
+        <span class="field-label">Gender</span>
+        <div>
+            <input type="radio" name="option-set" value="Male" />
+            <span>Male</span>
+            <input type="radio" name="option-set" value="Female" />
+            <span>Female</span>
+            <input type="radio" name="option-set" value="Transgender" />
+            <span for="female">Transgender</span>
+        </div>
+    </section>
+    <section class="block">
+        <select>
+
+                            <option> -- Select Country -- </option>
+                            <option value="Afganistan"> Afganistan </option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="India">India</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United States">United States</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+
+        </select>
+        <span class="field-label">State</span>
+    </section>
+    <section class="block">
+        <select>
+
+                            <option> -- Select Country -- </option>
+                            <option value="Afganistan"> Afganistan </option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="India">India</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United States">United States</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+
+        </select>
+        <span class="field-label">Country</span>
+    </section>
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
